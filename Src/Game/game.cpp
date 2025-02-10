@@ -16,6 +16,7 @@ namespace Conbusit
     void Game::Run()
     {
         Blitcl::SmartPointer<Core::EventSystemContext, Blitcl::AllocationType::Engine> eventSystem;
+        Blitcl::SmartPointer<Core::InputSystemContext, Blitcl::AllocationType::Engine> inputSystem;
 
         BLIT_ASSERT(ActivateGameControls());
 
@@ -27,6 +28,8 @@ namespace Conbusit
             {
                 isRunning = 0;
             }
+
+            Core::UpdateInput(0);
         }
     }
 

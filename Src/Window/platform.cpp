@@ -178,8 +178,8 @@ namespace Platform
                 {
                     // Key pressed/released
                     uint8_t pressed = (msg == WM_KEYDOWN || msg == WM_SYSKEYDOWN);
-                    /*BlitzenCore::BlitKey key = static_cast<BlitzenCore::BlitKey>(w_param);
-                    BlitzenCore::InputProcessKey(key, pressed);*/
+                    Core::BlitKey key = static_cast<Core::BlitKey>(w_param);
+                    Core::InputProcessKey(key, pressed);
                     break;
                 } 
                 case WM_MOUSEMOVE: 
