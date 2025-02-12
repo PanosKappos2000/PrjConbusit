@@ -3,6 +3,9 @@
 #include <cstdint>
 #include "VendorCode/blitcl.h"
 
+#define CON_WINDOW_WIDTH    1280
+#define CON_WINDOW_HEIGHT   768
+
 namespace Conbusit
 {
     class Game

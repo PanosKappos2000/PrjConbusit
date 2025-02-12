@@ -2,6 +2,7 @@
 #include "control.h"
 #include "Window/platform.h"
 #include "Window/events.h"
+#include "Rendering/renderer.h"
 
 namespace Conbusit
 {
@@ -20,7 +21,9 @@ namespace Conbusit
 
         BLIT_ASSERT(ActivateGameControls());
 
-        BLIT_ASSERT(Platform::WindowSystemInit("Conbusit", 100, 100, 1280, 768))
+        BLIT_ASSERT(Platform::WindowSystemInit("Conbusit", 100, 100, CON_WINDOW_WIDTH, CON_WINDOW_HEIGHT))
+
+        Blitcl::SmartPointer<RenderingSystem, Blitcl::AllocationType::Renderer> renderer;
 
         while(isRunning)
         {
