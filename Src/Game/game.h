@@ -1,7 +1,7 @@
 #pragma once
 
 #include <cstdint>
-#include "VendorCode/blitcl.h"
+#include <blitcl.h>
 
 #define CON_WINDOW_WIDTH    1280
 #define CON_WINDOW_HEIGHT   768

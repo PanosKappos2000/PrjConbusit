@@ -25,7 +25,8 @@ add_executable(Conbusit
 target_include_directories(Conbusit PUBLIC
                             "${PROJECT_SOURCE_DIR}/Src"
                             "${PROJECT_SOURCE_DIR}/Src/VendorCode"
-                            "${PROJECT_SOURCE_DIR}/ExtDeps/Vulkan/Include")
+                            "${PROJECT_SOURCE_DIR}/ExtDeps/Vulkan/Include"
+                            "${PROJECT_SOURCE_DIR}/Blitcl/Include")
 
 target_link_directories(Conbusit PUBLIC
                         "${PROJECT_SOURCE_DIR}/ExtDeps/Vulkan/Lib")

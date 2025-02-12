@@ -1,6 +1,7 @@
 #pragma once
 
 #include <vulkan/vulkan.h>
+#include <blitcl.h>
 
 namespace ConVk
 {
@@ -11,6 +12,8 @@ namespace ConVk
 
         inline static VulkanRenderer* GetVulkan() { return s_pVulkan; }
 
+        void Shutdown();
+
     public:
         VkDevice _device;
 
@@ -19,7 +22,11 @@ namespace ConVk
         static VulkanRenderer* s_pVulkan;
 
         VkInstance _instance;
+
+        VkDebugUtilsMessengerEXT _debugMessenger;
     };
 
-    uint8_t CreateInstance(VkInstance& instance);
+    uint8_t CreateInstance(VkInstance& instance, VkDebugUtilsMessengerEXT& debugMessenger);
+
+    uint8_t CreateDebugMessenger(VkDebugUtilsMessengerEXT& debugMessenger, VkDebugUtilsMessengerCreateInfoEXT& createInfo);
 }

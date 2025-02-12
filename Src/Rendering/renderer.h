@@ -2,7 +2,7 @@
 
 #include <cstdint>
 #include "ConVulkan/vkRenderer.h"
-#include "VendorCode/blitcl.h"
+#include "blitcl.h"
 
 namespace Conbusit
 {
